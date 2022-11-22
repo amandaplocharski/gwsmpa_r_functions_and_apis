@@ -95,15 +95,6 @@ hillary_vote_2016
 
 ```{r}
 
-joined_counties <- inner_join(counties_elexresults, counties_demographics, by = "geoid")
-joined_counties_pennsylvania <- joined_counties %>% 
-  filter(state_code == "PA")
-
-nonwhite_voters <- joined_counties %>% 
-  group_by(pct_race_nonwhite) %>% 
-  summarise(mean_vote_percentage = mean(pct_d_2020))
-
-nonwhite_voters
 
 
 
